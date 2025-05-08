@@ -36,6 +36,12 @@ const Basket = () => {
         })
         updatedBasket(newBasket)
     }
+
+    const remove = (_id) => {
+        const newBasket = basket.filter(item => item._id !== _id)
+        updatedBasket(newBasket)
+    }
+
     return (
         <div className={styles.basket}>
             <h1>Basket</h1>

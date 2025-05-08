@@ -5,17 +5,20 @@ import { getProductsThunk } from '../../redux/reducer/productSlice';
 const Flowes = () => {
 
 
-    const [basket, SetBasket] = useState([])
+    const [basket, setBasket] = useState([])
+    const [wishlist, setWishlist] = useState([])
     const [search, setSearch] = useState('')
-    const [sort ,setSort] = useState('')
+    const [sort, setSort] = useState('')
 
     const dispatch = useDispatch();
     const { product, loading, error } = useSelector((state) => state.products)
 
     useEffect(() => {
         dispatch(getProductsThunk())
-        const storedBasket = JSON.parse(localStorage.getItem('basket'))
-        SetBasket(storedBasket)
+        const storedBasket = JSON.parse(localStorage.getItem('basket')) || []
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+        setBasket(storedBasket)
+        setWishlist(storedWishlist)
     }, [dispatch])
 
     const addToBasket = (item) => {
@@ -30,8 +33,26 @@ const Flowes = () => {
         }
 
         localStorage.setItem('basket', JSON.stringify(updatedBasket))
-        SetBasket(updatedBasket)
+        setBasket(updatedBasket)
     }
+
+    const addToWish = (item) => {
+        const updatedWishlist = [...wishlist]
+        const existingWishlist = updatedWishlist.findIndex((i) => i._id === item._id)
+
+        if (existingWishlist > 1) {
+            updatedWishlist.splice(index, 1)
+        }
+        else {
+            updatedWishlist.push(item);
+        }
+
+        localStorage.setItem('wishlist', JSON.stringify(updatedWishlist))
+        setWishlist(updatedWishlist)
+    }
+    console.log(wishlist);
+
+    const isInWishList = (id) => wishlist.some((item) => item._id === id)
 
     const filteredProducts = product
         ?.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
@@ -68,14 +89,17 @@ const Flowes = () => {
                     </div>
 
                     <div className={styles.flowersBox}>
-                        {product.slice(0, 6).map((item, index) => (
+                        {filteredProducts?.slice(0, 6).map((item, index) => (
                             <div key={index} className={styles.flowersProduct}>
                                 <div className={styles.flowersimage}><img src={item.image} alt="" /></div>
                                 <div className={styles.flowersBody}>
                                     <p>{item.name}</p>
                                     <p>${item.price}</p>
                                 </div>
-                                <button onClick={() => addToBasket(item)}>Add to Basket</button>
+                                <button onClick={() => addToBasket(item)}>Add To Basket</button>
+                                <button onClick={() => addToWish(item)}>
+                                    {isInWishList(item._id) ? "Remove from WishList" : "Add To WishList"}
+                                </button>
                             </div>
                         ))}
                     </div>
