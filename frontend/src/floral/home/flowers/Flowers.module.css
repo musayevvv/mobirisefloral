@@ -1,0 +1,142 @@
+.flowersSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 0;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1-1-1085x595.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1400px;
+    padding: 0 50px;
+
+}
+
+.flowersDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flowersText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flowersText h3:first-child {
+    color: #1b745e;
+    text-align: center;
+    font-style: italic;
+    padding: 0;
+    font-size: calc(1.04375rem + (1.125 - 1.04375) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc(1.4 * (1.04375rem + (1.125 - 1.04375) * ((100vw - 20rem) / (48 - 20))));
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+}
+
+.flowersText h3 {
+    color: #0c5b47;
+    text-align: center;
+    padding-bottom: 60px;
+    font-size: 50px;
+    line-height: calc(1.1 * (1.65625rem + (2.875 - 1.65625) * ((100vw - 20rem) / (48 - 20))));
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.flowersBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.flowersProduct {
+    width: 310px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+    }
+}
+
+.flowersProduct button {
+    margin-top: 10px;
+    width: 60%;
+    border: none;
+    background-color: #1b745e;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.flowersBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flowersBody p:first-child {
+    color: #1b745e;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.375rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.flowersBody p {
+    color: #1b745e;
+    padding-top: 5px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+
+
+.inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.inputBox input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.inputBox button {
+    padding: 10px 15px;
+    background-color: #0c5b47;
+    border: none;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.inputBox button:hover {
+    background-color: #0c5b47;
+}

@@ -1,0 +1,42 @@
+.bannerSection {
+    width: 100%;
+    height: 92.5vh;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/sl1-967x725.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.bannerText h5:first-child {
+    padding-bottom: 15px;
+    font-style: italic;
+    color: #1b745e;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.bannerText h5 {
+    padding-bottom: 30px;
+    color: #1b745e;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.875rem;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+@media only screen and (max-width:576px) {
+    .bannerText h5 {
+        font-size: 35px;
+    }
+}

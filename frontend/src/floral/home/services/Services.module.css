@@ -1,0 +1,98 @@
+.servicesSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 90px 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1400px;
+    padding: 0 50px;
+}
+
+.servicesDiv {
+    display: flex;
+    width: 80%;
+    background-color: #1b745e;
+}
+
+.servicesLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    gap: 5px;
+
+    h5 {
+        margin: 0 0 12px;
+        color: #ffffff;
+        font-size: 2.3rem;
+        font-family: 'Quicksand', sans-serif;
+        line-height: 1.1;
+    }
+
+    p {
+        padding: 0 0px 20px;
+        color: #ffffff;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    button {
+        font-weight: 400;
+        background-color: #d8e3d5 !important;
+        border: 1px solid #d8e3d5 !important;
+        color: #10634e !important;
+        padding: 0.5625rem 2.3125rem;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+}
+
+.leftText {
+    width: 310px;
+}
+
+.servicesRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+
+    img {
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .servicesDiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px;
+    }
+
+    .leftText {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .servicesRight {
+        width: 100%;
+    }
+}
